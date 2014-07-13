@@ -10,6 +10,6 @@ import java.io.*;
 abstract class ShapeAsString {
     private String pyramid;
 
-    private int promptToSetDimensions() throws IOException { return 0; }
-    private String StructureAsString(int height){ return pyramid; }
+    protected abstract int promptToSetDimensions() throws IOException;
+    protected abstract String StructureAsString(int height);
 }

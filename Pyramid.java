@@ -14,7 +14,7 @@ class Pyramid extends ShapeAsString {
         pyramid = StructureAsString(promptToSetDimensions());
     }
 
-    private int promptToSetDimensions() throws IOException {
+    protected int promptToSetDimensions() throws IOException {
         int height = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter height (2 - 23): ");
@@ -29,12 +29,7 @@ class Pyramid extends ShapeAsString {
         return height;
     }
 
-    @Override
-    public String toString() {
-        return pyramid;
-    }
-
-    private String StructureAsString(int height) {
+    protected String StructureAsString(int height) {
         StringBuilder structure = new StringBuilder();
 
         for (int row = 1; row <= height; row++) {
@@ -46,6 +41,11 @@ class Pyramid extends ShapeAsString {
             structure.append("#\n");
         }
         return structure.toString();
+    }
+
+    @Override
+    public String toString() {
+        return pyramid;
     }
 
 }
