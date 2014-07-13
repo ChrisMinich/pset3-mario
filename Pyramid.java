@@ -17,13 +17,13 @@ class Pyramid extends ShapeAsString {
     protected int promptToSetDimensions() throws IOException {
         int height = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Enter height (2 - 23): ");
+        System.out.print(String.format("Enter height (2 - 23): "));
         do {
             try{
                 height = Integer.parseInt(br.readLine());
             }
             catch (NumberFormatException nfe) {
-                System.err.println("Invalid Format!");
+                System.err.println(String.format("Invalid Format!"));
             }
         } while ((height < 2) || (height > 23));
         return height;
