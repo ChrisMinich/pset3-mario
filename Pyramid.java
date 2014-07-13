@@ -7,14 +7,14 @@
 package mario;
 import java.io.*;
 
-class Pyramid implements ShapeAsString {
-    String pyramid;
+class Pyramid extends ShapeAsString {
+    private String pyramid;
 
     public Pyramid() throws IOException {
         pyramid = StructureAsString(promptToSetDimensions());
     }
 
-    public int promptToSetDimensions() throws IOException {
+    private int promptToSetDimensions() throws IOException {
         int height = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter height (2 - 23): ");
@@ -34,7 +34,7 @@ class Pyramid implements ShapeAsString {
         return pyramid;
     }
 
-    public String StructureAsString(int height) {
+    private String StructureAsString(int height) {
         StringBuilder structure = new StringBuilder();
 
         for (int row = 1; row <= height; row++) {
