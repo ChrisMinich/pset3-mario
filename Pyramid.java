@@ -11,7 +11,7 @@ class Pyramid extends ShapeAsString {
     private String pyramid;
 
     public Pyramid() throws IOException {
-        pyramid = StructureAsString(promptToSetDimensions());
+        pyramid = build(promptToSetDimensions());
     }
 
     protected int promptToSetDimensions() throws IOException {
@@ -29,7 +29,7 @@ class Pyramid extends ShapeAsString {
         return height;
     }
 
-    protected String StructureAsString(int height) {
+    protected String build(int height) {
         StringBuilder structure = new StringBuilder();
 
         for (int row = 1; row <= height; row++) {
