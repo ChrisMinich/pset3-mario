@@ -28,6 +28,7 @@ public class Mario {
         else {
             System.out.print(pyr.toString());
         }
+
     }
 
 }
